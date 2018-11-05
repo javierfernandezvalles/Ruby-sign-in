@@ -1,4 +1,3 @@
-
 $(document).on('turbolinks:load', function() {
     if ($(".single-post-card").length) {
         // set a solid background color style
