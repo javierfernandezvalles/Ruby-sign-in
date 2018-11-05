@@ -1,4 +1,4 @@
-require "rails helper"
+require "rails_helper"
 
 RSpec.feature "Logout", :type => feature do
   let(:user) { create(:user) }
