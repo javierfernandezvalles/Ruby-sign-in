@@ -6679,3 +6679,50 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 72ms (Views: 68.1ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-07 09:46:01 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/rbenv/1.1.1/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered posts/_modal.html.erb (0.2ms)
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/pages/index.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:8
+  Rendered collection of posts/_post.html.erb [5 times] (33.6ms)
+  Rendered pages/index.html.erb within layouts/application (51.7ms)
+  Rendered layouts/navigation/_header.html.erb (1.0ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/navigation_helper.rb:4
+  Rendered layouts/navigation/collapsible_elements/_signed_in_links.html.erb (1.6ms)
+  Rendered layouts/navigation/_collapsible_elements.html.erb (7.0ms)
+  Rendered layouts/_navigation.html.erb (12.8ms)
+Completed 200 OK in 2100ms (Views: 2076.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-11-07 09:46:07 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:4
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:4
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/navigation/_header.html.erb (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/navigation_helper.rb:4
+  Rendered layouts/navigation/collapsible_elements/_signed_in_links.html.erb (0.6ms)
+  Rendered layouts/navigation/_collapsible_elements.html.erb (5.2ms)
+  Rendered layouts/_navigation.html.erb (10.5ms)
+Completed 200 OK in 90ms (Views: 83.2ms | ActiveRecord: 2.3ms)
+
+
