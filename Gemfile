@@ -14,7 +14,7 @@ gem 'puma', '~> 3.11'
 gem 'jquery-rails'
 
 # Use bootstrap-sass as bootstrapper
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.3.6', require: true
 
 gem 'bootstrap_form'
 # Use SCSS for stylesheets
