@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :user do
     # n is going to be increased by one each new user.
     sequence(:name) { |n| "test#{n}"}
