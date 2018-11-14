@@ -1,3 +1,8 @@
+body {
+  margin-top: 70px;
+  margin-left: 15px;
+}
+
 nav {
   .navbar-header {
     width: 100%;
@@ -15,6 +20,24 @@ nav {
      padding: 0;
   }
 }
+
+.navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
+  background: $navbarColor !important;
+  border:none;
+  a {
+    color: white !important;
+  }
+}
+
+.navbar-toggle, .navbar-collapse {
+  border-color: $navbarColor !important;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  margin: 0 0 0 10px !important;
+}
+
 .pc-menu {
   margin-right: 10px;
 }
@@ -56,17 +79,4 @@ nav {
 .dropdown-menu a:hover {
   color: black !important;
   background: white !important;
-}
-
-.navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
-  background: $navbarColor !important;
-  border:none;
-  a {
-    color: white !important;
-  }
-}
-
-body {
-  margin-top: 70px;
-  margin-left: 15px;
 }
